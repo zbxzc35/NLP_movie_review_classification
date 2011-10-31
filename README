@@ -1,0 +1,60 @@
+The file write_up.pdf explains the methodology behind training and what features were extracted for each classifier task
+
+The following files are the part of the project
+
+ARFF FILES
+1. starRatingSameUsersTrain.arff
+2. starRatingDiffUsersTrain.arff
+3. binaryRatingSameUsersTrain.arff
+4. binaryRatingDiffUsersTrain.arff
+5. authorTrain.arff
+
+
+SCRIPT FILES
+1. author.sh
+2. starRatingSameUsers.sh
+3. starRatingDiffUsers.sh
+4. binaryRatingSameUsers.sh
+5. binaryRatingDiffUsers.sh
+
+
+##################################################################################################################
+SCRIPT FILE USAGE
+
+$ ./script_file_name.sh		model_name.model	movie-review-file.txt		labelled-output-reviews.txt
+##################################################################################################################	 
+
+
+MODEL FILES
+1. author.model 			- generated using SVM classifier
+2. binaryRatingSameUsers.model		- generated using NB classifier
+3. binaryRatingDiffUSers.model		- same as binaryRatingSameUsers.model
+4. starRatingSameUsers.model		- generated using SVM classifier
+5. starRatingDiffUsers.model		- same as starRatingSameUsers.model
+
+The models were made as generalized as possible without using any domain specific information. Hence the same were specified in both the same users and in the different users case.
+
+
+FEATURE EXTRACTING FEATURE FILES
+1. quart_score.py 	- Extracts features for the 4 star classification task
+2. binary4.py  		- Extracts features for the 2 class Positive-Negative Classification
+3. author1.py 		- Extracts features for the Reviewer Classification Task
+
+
+###############################################################################################
+PYTHON FILE USAGE
+
+$ python 	python_file.py		movie-review-file.txt		feature-file.arff 
+###############################################################################################
+
+
+
+SUPPORTING PYTHON FILES -- prepare the final output text document with the predicted output inserted into the text document
+1. final_star.py
+2. final_binary.py
+3. final.py
+
+
+Also attached is SentiWordNet which is located in the file 
+senti.txt
+
